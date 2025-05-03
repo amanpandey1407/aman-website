@@ -1,0 +1,185 @@
+.project-card {
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  background: #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.project-card p {
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+.project-card p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slick-slide {
+  padding: 0 10px; /* Adjust the value for desired spacing */
+  box-sizing: border-box;
+}
+
+.slick-track {
+  margin: 50px 0px; /* Adjust the value for desired spacing */
+}
+
+.slick-dots {
+  margin-top: 30px; /* Adjust as needed */
+}
+
+/* White colored dots */
+.slick-dots li button:before {
+  color: white !important;
+  opacity: 0.75;
+}
+
+.slick-dots li button:before {
+  color: white !important;
+  opacity: 0.4; /* Inactive dot */
+}
+
+/* Active dot is fully white */
+.slick-dots li.slick-active button:before {
+  opacity: 1 !important;
+}
+.slick-prev,
+.slick-next {
+  color: white;
+  font-size: 18px;
+}
+
+.project-dialog-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.95);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.project-dialog-fullscreen {
+  position: relative;
+  background: #1e1e1e;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 1100px;
+  height: 90%;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog-close {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  font-size: 32px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+.dialog-scrollable {
+  overflow-y: auto;
+  padding: 40px 20px 20px 20px;
+  height: 100%;
+  display: flex;
+  gap: 40px;
+  flex-direction: row; /* content side-by-side */
+}
+
+.dialog-images {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  gap: 16px;
+  max-height: 100%;
+  overflow-y: auto; /* enable scroll */
+  padding-right: 10px;
+}
+
+.dialog-images img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.dialog-content {
+  flex: 2;
+  padding: 0 20px;
+}
+
+.dialog-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.project-description {
+  line-height: 1.6;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .project-dialog-fullscreen {
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .dialog-scrollable {
+    flex-direction: column;
+    padding: 80px 16px 20px 16px;
+  }
+
+  .dialog-images {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .dialog-images img {
+    width: 240px;
+    height: 160px;
+    flex-shrink: 0;
+  }
+
+  .dialog-content {
+    padding: 0;
+  }
+}

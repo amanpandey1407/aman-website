@@ -1,0 +1,156 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #121212;
+  height: 80px;
+  padding: 30px 60px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+}
+
+.logoText {
+  text-decoration: none;
+  color: #1e90ff;
+  font-size: 28px;
+  font-weight: 900; /* 🔥 More bold */
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 20px; /* 🔥 Larger text */
+  font-weight: 600; /* 🔥 Bolder text */
+  padding-bottom: 10px; /* Ensures underline doesn't overlap */
+  transition: color 0.3s;
+}
+
+.navItem {
+  position: relative;
+  padding: 0 10px;
+}
+
+.navItem.active .navLink {
+  color: #1e90ff;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: #1e90ff;
+}
+
+
+.underline {
+  position: absolute;
+  bottom: -4px; /* 🔥 More space under the text */
+  height: 3px;
+  border-radius: 2px;
+  background-color: #1e90ff;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.talkButton {
+  padding: 10px 20px;
+  background-color: #1e90ff;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.talkButton:hover {
+  background-color: #0078d4;
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 30px; /* Adjust padding for mobile */
+    height: 70px;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff; /* Make hamburger icon color visible */
+  }
+
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    background-color: #121212;
+    position: absolute;
+    top: 70px; /* Adjust to sit right below the navbar */
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for separation */
+  }
+
+  .navLinks.open {
+    display: flex;
+  }
+
+  .navItem {
+    position: relative;
+    width: 100%; /* Make items take full width */
+    margin-bottom: 15px; /* Add space between items */
+    text-align: center; /* Center text */
+  }
+
+  .navLink {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 0;
+    transition: color 0.3s;
+    display: block;
+  }
+
+  .navLink:hover {
+    color: #1e90ff;
+  }
+
+  .talkButton {
+    display: block; /* Make 'Let’s Talk' button occupy full width */
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    background-color: #1e90ff;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Give some space above the button */
+  }
+
+  .talkButton:hover {
+    background-color: #0078d4;
+  }
+
+  /* Remove underline on mobile */
+  .underline {
+    display: none;
+  }
+}
