@@ -9,7 +9,9 @@ import {
   expensetracker04,
   expensetracker05,
   expensetracker06,
-  multimart,
+  multimart01,
+  multimart02,
+  multimart03,
   portfoliowebsite,
   webtypist,
 } from "@/assets/imageindex";
@@ -67,8 +69,9 @@ const projects = [
   },
   {
     title: "Multimart E-commerce Store",
-    description: "React + Stripe-powered modern e-commerce frontend.",
-    images: [multimart.src],
+    description:
+      "A full-featured e-commerce application built with React on the frontend and Node.js on the backend. The site includes a dynamic product catalog, add-to-cart functionality, a secure checkout page and responsive design for smooth shopping on all devices. Designed with a modern UI and optimized for performance, this project showcases key features of a scalable online store.",
+    images: [multimart01.src, multimart02.src, multimart03.src],
   },
   {
     title: "WebTypist",
