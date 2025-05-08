@@ -2,19 +2,9 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "../style/projects.css";
-import {
-  expensetracker01,
-  expensetracker02,
-  expensetracker03,
-  expensetracker04,
-  expensetracker05,
-  expensetracker06,
-  multimart01,
-  multimart02,
-  multimart03,
-  portfoliowebsite,
-  webtypist,
-} from "@/assets/imageindex";
+
+import { projects } from "./projectsData";
+import { placeholder } from "@/assets/imageindex";
 
 const settings = {
   dots: true,
@@ -47,39 +37,6 @@ const mobilesettings = {
   autoplay: true,
   autoplaySpeed: 3000,
 };
-
-const projects = [
-  {
-    title: "Expense Tracker",
-    description:
-      "A full-stack Budget Planner App built with Angular, .NET Core, and PostgreSQL. Users can track expenses, set savings goals, and generate personalized budget plans. Admins manage categories and control a central budget plan. Features include Google OAuth login, responsive UI, and real-time budget tracking.",
-    images: [
-      expensetracker01.src,
-      expensetracker02.src,
-      expensetracker03.src,
-      expensetracker04.src,
-      expensetracker05.src,
-      expensetracker06.src,
-    ],
-  },
-  {
-    title: "Portfolio Website",
-    description: "Personal portfolio using Next.js and Tailwind CSS.",
-    images: [portfoliowebsite.src],
-  },
-  {
-    title: "Multimart E-commerce Store",
-    description:
-      "A full-featured e-commerce application built with React on the frontend and Node.js on the backend. The site includes a dynamic product catalog, add-to-cart functionality, a secure checkout page and responsive design for smooth shopping on all devices. Designed with a modern UI and optimized for performance, this project showcases key features of a scalable online store.",
-    images: [multimart01.src, multimart02.src, multimart03.src],
-  },
-  {
-    title: "WebTypist",
-    description:
-      "This website is designed to help users significantly improve their typing speed and accuracy. In today's fast-paced digital world, typing is an essential skill for productivity and communication. Practice regularly, track your progress, and make this platform your go-to resource for developing efficient typing habits.",
-    images: [webtypist.src],
-  },
-];
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -118,7 +75,10 @@ const Projects = () => {
               }}
             >
               <div className="project-image">
-                <img src={project.images[0]} alt={project.title} />
+                <img
+                  src={project.images[0] || placeholder.src}
+                  alt={project.title}
+                />
               </div>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
@@ -174,6 +134,17 @@ const Projects = () => {
 
                 <div className="dialog-content">
                   <h3>{selectedProject.title}</h3>
+                  {selectedProject.link && (
+                    <a
+                      href={selectedProject.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link"
+                    >
+                      Visit Project ↗
+                    </a>
+                  )}
+
                   <p className="project-description">
                     {selectedProject.description}
                   </p>

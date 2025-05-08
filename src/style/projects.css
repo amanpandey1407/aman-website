@@ -157,6 +157,24 @@
   font-size: 1rem;
   opacity: 0.9;
 }
+.project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #4ea1f3;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.project-features {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  list-style: disc;
+  color: #ccc;
+}
 
 @media (max-width: 768px) {
   .project-dialog-fullscreen {

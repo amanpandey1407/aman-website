@@ -12,6 +12,8 @@ import multimart01 from "./multimart-01.png";
 import multimart02 from "./multimart-02.png";
 import multimart03 from "./multimart-03.png";
 import webtypist from "./webtypist.png";
+import placeholder from "./placeholder.jpg";
+import printflink from "./printflink-01.png";
 
 export {
   aboutimage,
@@ -27,4 +29,6 @@ export {
   multimart02,
   multimart03,
   webtypist,
+  placeholder,
+  printflink,
 };

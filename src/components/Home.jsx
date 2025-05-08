@@ -1,13 +1,11 @@
-'use client';
-import React from 'react';
-import '../style/home.css';
+"use client";
+import React from "react";
+import "../style/home.css";
 import { profileimage } from "@/assets/imageindex";
 
-import { TypeAnimation } from 'react-type-animation';
+import { TypeAnimation } from "react-type-animation";
 
 const Home = () => {
-  console.log("Profile image path:", profileimage);
-
   return (
     <section className="home section" id="home">
       <div className="home-left">
@@ -24,25 +22,40 @@ const Home = () => {
             ]}
             wrapper="span"
             speed={50}
-            style={{ display: 'inline-block' }}
+            style={{ display: "inline-block" }}
             repeat={Infinity}
           />
         </div>
 
         <div className="home-buttons">
-          <a href="#projects" className="btn primary">View Projects</a>
-          <a href="#contact" className="btn secondary">Contact Me</a>
+          <a href="#projects" className="btn primary">
+            View Projects
+          </a>
+          <a href="#contact" className="btn secondary">
+            Contact Me
+          </a>
         </div>
 
         <div className="social-icons">
-          <a href="https://github.com/amanpandey1407" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/amanpandey1407/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a
+            href="https://github.com/amanpandey1407"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/amanpandey1407/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
         </div>
       </div>
 
       <div className="home-right">
-      <img src={profileimage.src} alt="Aman Pandey" className="profile-img" />
-
+        <img src={profileimage.src} alt="Aman Pandey" className="profile-img" />
       </div>
     </section>
   );

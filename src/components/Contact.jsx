@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import '../style/contact.css';
+"use client";
+import React from "react";
+import "../style/contact.css";
 
 const Contact = () => {
   const handleFormSubmit = (e) => {
@@ -31,14 +31,28 @@ const Contact = () => {
         <div className="contact-right">
           <form className="contact-form" onSubmit={handleFormSubmit}>
             <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <textarea name="message" placeholder="Your Message" rows="5" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              required
+            />
             <button type="submit">Send Message</button>
           </form>
 
           <div className="contact-details">
-            <p><strong>Email:</strong> <a href="mailto:amanpandey1400@gmail.com">amanpandey1400@gmail.com</a></p>
-            <p><strong>Phone:</strong> <a href="tel:+91894985812">+91 894895812</a></p>
+            <p>
+              <strong>Email:</strong>{" "}
+              <a href="mailto:amanpandey1400@gmail.com">
+                amanpandey1400@gmail.com
+              </a>
+            </p>
           </div>
         </div>
       </div>
